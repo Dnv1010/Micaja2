@@ -1,0 +1,15 @@
+﻿const fs = require('fs');
+const f = 'C:/Users/User/Documents/Caja menor/micaja/components/layout/sidebar-nav.tsx';
+let c = fs.readFileSync(f, 'utf8');
+c = c.replace(/EnvÃ­os/g, 'Envíos');
+c = c.replace(/EnvÃos/g, 'Envíos');
+c = c.replace(/Ã³/g, 'ó');
+c = c.replace(/Ã¡/g, 'á');
+c = c.replace(/Ã­/g, 'í');
+c = c.replace(/Ãº/g, 'ú');
+c = c.replace(/Ã±/g, 'ñ');
+c = c.replace(/Ã©/g, 'é');
+c = c.replace(/â€"/g, '—');
+c = c.replace(/Â·/g, '·');
+fs.writeFileSync(f, c, 'utf8');
+console.log('Listo');
